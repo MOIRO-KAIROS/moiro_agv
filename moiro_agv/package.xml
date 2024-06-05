@@ -11,7 +11,7 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   
-  <exec_depend>moiro_description</exec_depend>
+  <exec_depend>moiro_agv_description</exec_depend>
   <exec_depend>moiro_agv_bringup</exec_depend>
   <exec_depend>moiro_agv_cartographer</exec_depend>
   <exec_depend>moiro_agv_example</exec_depend>

@@ -1,0 +1,325 @@
+<?xml version="1.0" ?>
+<robot name="moiro_agv" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find moiro_agv_description)/urdf/materials.xacro" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.004061324615345184 -0.0009116164337380085 0.24617368822700772" rpy="0 0 0"/>
+    <mass value="10.545097806108753"/>
+    <inertia ixx="0.51324" iyy="0.538342" izz="0.439241" ixy="0.002006" iyz="0.002408" ixz="-0.014735"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_zig">
+  <inertial>
+    <origin xyz="0.014530099919036615 0.044049338752250145 0.028344157098708633" rpy="0 0 0"/>
+    <mass value="0.059863707592883605"/>
+    <inertia ixx="9.5e-05" iyy="4.8e-05" izz="4.9e-05" ixy="-3e-06" iyz="-5e-06" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.24875 0.045 -0.52" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/camera_zig.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.24875 0.045 -0.52" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/camera_zig.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_link">
+  <inertial>
+    <origin xyz="-0.04153434985377516 -0.031630029317067154 0.002586806247330431" rpy="0 0 0"/>
+    <mass value="0.030287554797551564"/>
+    <inertia ixx="1.3e-05" iyy="2.9e-05" izz="4.2e-05" ixy="-1e-06" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.048037 -0.045 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/imu_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.048037 -0.045 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/imu_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link">
+  <inertial>
+    <origin xyz="0.012171550992974123 1.5521819223018093e-06 -4.879803335100519e-05" rpy="0 0 0"/>
+    <mass value="0.37833295379166415"/>
+    <inertia ixx="0.000238" iyy="3.5e-05" izz="0.00024" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.26675 -0.00175 -0.558285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/camera_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.26675 -0.00175 -0.558285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/camera_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_6">
+  <inertial>
+    <origin xyz="0.020672551156246277 0.009396455766248653 -0.02565460037687648" rpy="0 0 0"/>
+    <mass value="0.14564908217460187"/>
+    <inertia ixx="4.1e-05" iyy="5.4e-05" izz="2.2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.238132 -0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.238132 -0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_5">
+  <inertial>
+    <origin xyz="0.02067255115624614 -0.00939645749397091 -0.025654600376876818" rpy="0 0 0"/>
+    <mass value="0.14564908217460187"/>
+    <inertia ixx="4.1e-05" iyy="5.4e-05" izz="2.2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.238132 0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.238132 0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_4">
+  <inertial>
+    <origin xyz="-0.02067270507506061 -0.009396457493972207 -0.02565460037687655" rpy="0 0 0"/>
+    <mass value="0.14564908217460187"/>
+    <inertia ixx="4.1e-05" iyy="5.4e-05" izz="2.2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.238132 0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.238132 0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_3">
+  <inertial>
+    <origin xyz="-0.02067270507506061 0.009396455766248105 -0.02565460037687625" rpy="0 0 0"/>
+    <mass value="0.14564908217460187"/>
+    <inertia ixx="4.1e-05" iyy="5.4e-05" izz="2.2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.238132 -0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.238132 -0.037118 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/caster_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_plate">
+  <inertial>
+    <origin xyz="3.024732238173218e-08 -0.020354187478525226 0.008984617763925118" rpy="0 0 0"/>
+    <mass value="0.5585010585602752"/>
+    <inertia ixx="0.001441" iyy="0.000926" izz="0.002337" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.0 -0.498" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/base_plate.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.0 -0.498" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/base_plate.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_scan">
+  <inertial>
+    <origin xyz="1.4890131030027799e-05 -0.008617362464656688 0.011145262430183378" rpy="0 0 0"/>
+    <mass value="0.4177280575470181"/>
+    <inertia ixx="0.000281" iyy="0.000143" izz="0.000351" ixy="-0.0" iyz="-3.9e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000412 -0.003127 -0.268745" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/base_scan.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000412 -0.003127 -0.268745" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/base_scan.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_right">
+  <inertial>
+    <origin xyz="2.3578246496907965e-07 -0.013441732021015451 6.740003968830344e-08" rpy="0 0 0"/>
+    <mass value="0.6403675217821955"/>
+    <inertia ixx="0.00197" iyy="0.003862" izz="0.00197" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0003 0.2233 -0.1025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/wheel_right.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0003 0.2233 -0.1025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/wheel_right.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_left">
+  <inertial>
+    <origin xyz="6.005099702088715e-07 0.013441732021011371 -6.212288056195447e-08" rpy="0 0 0"/>
+    <mass value="0.6403675217821955"/>
+    <inertia ixx="0.00197" iyy="0.003862" izz="0.00197" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000298 -0.2233 -0.1025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/wheel_left.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000298 -0.2233 -0.1025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find moiro_agv_description)/meshes/wheel_left.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="camera_zig_joint" type="fixed"> <!--joint의 pitch 값 변경 33도 회전-->
+  <origin xyz="0.24875 -0.045 0.52" rpy="0 -0.575959 0"/>
+  <parent link="base_link"/>
+  <child link="camera_zig"/>
+</joint>
+
+<joint name="imu_joint" type="fixed">
+  <origin xyz="0.048037 0.045 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_link"/>
+</joint>
+
+<joint name="camera_joint" type="fixed">
+  <origin xyz="0.018 0.04675 0.038285" rpy="0 0 0"/>
+  <parent link="camera_zig"/>
+  <child link="camera_link"/>
+</joint>
+
+<joint name="caster6_joint" type="fixed">
+  <origin xyz="-0.238132 0.037118 0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_6"/>
+</joint>
+
+<joint name="caster5_joint" type="fixed">
+  <origin xyz="-0.238132 -0.037118 0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_5"/>
+</joint>
+
+<joint name="caster4_joint" type="fixed">
+  <origin xyz="0.238132 -0.037118 0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_4"/>
+</joint>
+
+<joint name="caster3_joint" type="fixed">
+  <origin xyz="0.238132 0.037118 0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="caster_3"/>
+</joint>
+
+<joint name="base_plate_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.498" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_plate"/>
+</joint>
+
+<joint name="scan_joint" type="fixed">
+  <origin xyz="-0.000412 0.003127 0.268745" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_scan"/>
+</joint>
+
+<joint name="wheel_joint_right" type="continuous">
+  <origin xyz="0.0003 -0.2233 0.1025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_right"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel_joint_left" type="continuous">
+  <origin xyz="0.000298 0.2233 0.1025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_left"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+</robot>
