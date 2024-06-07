@@ -10,7 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(cartographer_ros REQUIRED)
 
 # Install
-install(DIRECTORY launch config
+install(DIRECTORY launch config rviz
   DESTINATION share/${PROJECT_NAME}
 )
 
