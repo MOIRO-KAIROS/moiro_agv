@@ -20,6 +20,12 @@ sudo apt-get install -y ros-humble-cartographer-ros ros-humble-navigation2 ros-h
 ## Result
 ### Teleoperation
 
+```sh
+ros2 launch moiro_agv_bringup moiro_agv.launch.py
+ros2 run moiro_agv_teleop teleop_keyboard 
+```
 ### SLAM
 
-### Navigation
+```sh
+ros2 launch moiro_agv_cartographer cartographer.launch.py
+```
