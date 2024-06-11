@@ -14,6 +14,9 @@ colcon build
 - cartographer-ros
 - navigation2
 - nav2-bringup
+```sh
+sudo apt-get install -y ros-humble-cartographer-ros ros-humble-navigation2 ros-humble-nav2-bringup
+```
 ## Result
 ### Teleoperation
 
